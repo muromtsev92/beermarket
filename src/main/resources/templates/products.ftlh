@@ -3,12 +3,18 @@
     <title>BeerMarket</title>
 </head>
 <body>
-<H1>Welcome to the BeerMarket!</H1><hr>
+<H1>Welcome to BeerMarket!</H1><hr>
 <H4>All kinds of beer!</H4><hr>
+<form action="/" method="get">
+    Search lot by name: <input type="text" name="title"><br>
+    <input type="submit" value="search">
+</form>
 <#list products as product>
     <div>
         <p>${product.title}</b> ${product.price} RUR | <a href="/product/${product.id}">More...</a></p>
     </div>
+    <#else>
+    <h3> No lots by now </h3>
 </#list>
 <hr>
 <h3>New product</h3>

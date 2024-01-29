@@ -13,8 +13,8 @@ public class ProductController {
     private final ProductService productService;
 
     @GetMapping("/")
-    public String products(Model model){
-        model.addAttribute("products", productService.getProductsList());
+    public String products(@RequestParam(name="title", required = false) String title, Model model){
+        model.addAttribute("products", productService.getProductsList(title));
         return "products";
     }
 
