@@ -5,6 +5,9 @@
 <body>
 <H1>Welcome to the BeerMarket!</H1><hr>
 <H4>Product info</H4>
+<#list images as img>
+    <img src="/images/${img.id}" height="60px"/><br><br>
+</#list>
 <b>Name: </b>${product.title}<br>
 <b>Descr: </b>${product.description}<br>
 <b>Price: </b>${product.price}<br>
